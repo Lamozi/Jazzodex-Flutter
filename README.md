@@ -1,17 +1,23 @@
-# tp
+# Jazzodex
 
-A new Flutter project.
+Application Flutter qui affiche une liste d'artistes de jazz (nom, photo, genre, ville, année de naissance/mort, biographie, chanson célèbre) en allant chercher les données sur l'API [TheAudioDB](https://www.theaudiodb.com/).
 
-## Getting Started
+## Structure
 
-This project is a starting point for a Flutter application.
+- `lib/models/` : modèle `JazzArtist`
+- `lib/pages/` : écran liste + écran détail
+- `lib/widgets/` : tuile de liste, bannière et carte d'infos de l'écran détail
 
-A few resources to get you started if this is your first Flutter project:
+## Prérequis
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter SDK installé ([guide d'installation](https://docs.flutter.dev/get-started/install))
+- Une connexion internet (l'app appelle l'API TheAudioDB à chaque lancement)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Lancer le projet
+
+```bash
+flutter pub get
+flutter run
+```
+
+`flutter run` propose de choisir l'appareil cible (Windows, Chrome, Android...). Sur le web, certaines images peuvent être bloquées par CORS selon le navigateur — préférer Windows/Android si besoin.
